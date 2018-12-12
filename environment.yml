@@ -4,6 +4,7 @@ dependencies:
   - bokeh=1.0.2
   - numpy=1.9.*
   - scipy=1.1.*
-  - PIL
+  - matplotlib=3.*
+  - scikit-image=0.14.*
   - tqdm=4.*
   - ipywidgets=7.*
