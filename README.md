@@ -50,8 +50,8 @@ git clone https://github.com/axyorah/reaction_diffusion_tutorial
 
 Oscillating dynamic systems are fascinating! And omnipresent... No matter your background, you've probably come across some oscillators during your studies, be it in a form of an [RLC contour](https://en.wikipedia.org/wiki/RLC_circuit) in your electrical engineering class or in a form of a [circadian clock](https://en.wikipedia.org/wiki/Circadian_clock) in your biochemistry class.
 
-<img width="300" height="200" src="https://j.gifs.com/Jq32gJ.gif"></img>
-<body><center><font size="2"><br><a href="https://en.wikipedia.org/wiki/Briggs%E2%80%93Rauscher_reaction">Briggs–Rauscher</a> reaction  is a well-known chemical oscillator (<a href="https://www.youtube.com/watch?v=WpBwlSn1XPQ">vid</a>)</font></center></body>
+<img width="300" height="200" src="images/briggs-rauscher.gif"></img>
+<body><center><font size="2"><br><a href="https://en.wikipedia.org/wiki/Briggs%E2%80%93Rauscher_reaction">Briggsâ€“Rauscher</a> reaction  is a well-known chemical oscillator (<a href="https://www.youtube.com/watch?v=WpBwlSn1XPQ">vid</a>)</font></center></body>
 
 Random question #1: what does the Briggs-Rauscher reaction in the video above have to do with the spotty pattern of cheetah and stripy pattern of zebra on the images below? Well, since this question is asked in the tutorial dedicated to oscillators, you might've guessed that the answer should have something to do with the oscillators... And this is indeed true. Although, if the Briggs-Rauscher reaction is an example of a system, that is oscillatory in time and is perfectly stable (homogenous) in space, the patterns on animal fur, quite the opposite, are the examples of systems, that are oscillatory in space and perfectly stable in time. The idea, that initially homogenous systems can spontaneously destabilize and develop spatial patterns was discussed back in the 1952 by Alan Turing in [Chemical Basis of Morphogenesis](http://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf). This seminal paper showed that the formation of many complex spatial patterns can be nicely described by all too familiar maths (and physics)! Which is really good news for anyone, who would want to recreate the formation of such patterns _in silico_.
 
@@ -70,17 +70,17 @@ Now you might be thinking: ok, I can picture systems, that are periodic in time 
 
 <table>
 <td>
-    <img src='https://upload.wikimedia.org/wikipedia/commons/d/d9/The_Belousov-Zhabotinsky_Reaction.gif' style="width:200px;height:200px;"></img>
-    <body><center> <br>Spirals in <br> <a href="https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction">Belousov-Zhabotinsky</a> reaction</center> </body>
+    <img src="images/belousov-zhabotinsky.gif" style="width:320px;height:200px;"></img>
+    <body><center> <br>Traveling waves in <br> <a href="https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction">Belousov-Zhabotinsky</a> reaction (<a href="https://www.youtube.com/watch?v=PpyKSRo8Iec">vid</a>)</center> </body>
 <td>    
 
 <td>
-<img src='https://j.gifs.com/MQG2RR.gif' style="width:200px;height:200px;"></img>
-<body><center><br>"Cell division" and "coral growth" <br>in Gray-Scott Reaction-Diffusion system (<a href="https://www.youtube.com/watch?v=PtPK_xx5Hks">vid</a>)</center></body>
+<img src='images/gray-scott-corals.gif' style="width:250px;height:200px;"></img>
+<body><center><br>"Coral growth" <br>in Gray-Scott Reaction-Diffusion system (<a href="http://www.karlsims.com/rd.html">vid</a>)</center></body>
 <td>
     
 <td>
-    <img src='https://j.gifs.com/oQ1KOY.gif' style="width:300px;height:200px;"></img>    
+    <img src='images/Gray_Scott_F620_k609_fr1248.gif' style="width:250px;height:200px;"></img>    
     <body><center> <br>"U-skates" emerging <br>in Gray-Scott Reaction-Diffusion system (<a href="http://mrob.com/pub/comp/xmorphia/index.html#formula">vid</a>)</center></body>
 <td>
 </table>
@@ -97,4 +97,4 @@ The whole notebook is divided into two parts:
 - [**Figuring out what makes system behave in an _interesting_ way**](parameters2behaviour.ipynb). Here we'll work with much simpler systems compared to the previous part, but we'll be studying them more systematically. At the end you should have an idea of which settings to toggle to make the system behave in a way you want to... more or less... This part has linear algebra galore! 
 
 ><font size=2>
-  In both parts we'll be working with _two_ system representations: "physical" and <a href="https://en.wikipedia.org/wiki/State-space_representation">state-space</a>. Physical representation uses notation familiar from textbooks, so we'll use this representation when initially working out the equations (e.g., we'll use $c$ for concentrations/expression levels and $k$ for reaction rate coefficients). State-space representation abstracts away from any physical meaning, which obfuscates things a little, but at the same time makes it more convenient to use general-purpose math tools. We'll mostly use state space notation in the code (e.g., we'll use $x$ to denote system state variables, $u$ to denote external inputs and $p$ to denote system parameters)</font>. 
+  In both parts we'll be working with _two_ system representations: "physical" and <a href="https://en.wikipedia.org/wiki/State-space_representation">state-space</a>. Physical representation uses notation familiar from textbooks, so we'll use this representation when initially working out the equations (e.g., we'll use <i><b>c</b></i> for concentrations/expression levels and <i><b>k</b></i> for reaction rate coefficients). State-space representation abstracts away from any physical meaning, which obfuscates things a little, but at the same time makes it more convenient to use general-purpose math tools. We'll mostly use state space notation in the code (e.g., we'll use <i><b>x</b></i> to denote system state variables, <i><b>u</b></i> to denote external inputs and <i><b>p</b></i> to denote system parameters)</font>. 
