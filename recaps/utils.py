@@ -1,14 +1,5 @@
 import numpy as np
-from tqdm import tqdm_notebook as tqdm 
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from bokeh.plotting import figure
-from bokeh.io import push_notebook, show, output_notebook
-from bokeh.models.widgets import Div
-from bokeh.layouts import row, column
-from bokeh.palettes import Colorblind
-from  ipywidgets import interact
-output_notebook()
+from tqdm import tqdm_notebook as tqdm
 
 def euler_forward(dxdt, x, t_span, p):
     """returns the values of x at time instances given in t_span 
@@ -33,17 +24,19 @@ def euler_forward(dxdt, x, t_span, p):
     return x_span 
 
 def runge_kutta2(dxdt, x, t_span, p):
+    """returns the values of x at time instances given in t_span 
+    calculated using function dxdt with parameters p
+    INPUTS:
+        dxdt: function object: function that returns dxdt as flat 1D ndarray
+        x: 1D array:           initial condition
+        t_span: 1D array:      time instances
+        p: dict:               parameters used by dxdt
+    OUTPUT:
+        x_span: (len(x), len(t_span)) array"""
     x_span = np.zeros((len(x), len(t_span)))
     x_span[:,0] = x
-    
-    #dt = t_span[1] - t_span[0] # get dt
-    #x = x.reshape(-1,1).astype(float) # make sure that x0 is a column vector
-    
-    # preallocate/initialize
-    #x_span = np.zeros((len(x), len(t_span)+1))
-    #x_span[:,0] = x.ravel()
         
-    for it,t in enumerate(t_span[1:]):
+    for it,t in enumerate(tqdm(t_span[1:])):
         dt = t_span[it+1] - t_span[it]
         k1 = dxdt(t,        x,        p)*dt
         k2 = dxdt(t+0.5*dt, x+0.5*k1, p)*dt
@@ -51,35 +44,6 @@ def runge_kutta2(dxdt, x, t_span, p):
         x_span[:,it+1] = x
         
     return x_span
-   
-
-def get_dynamic_plots(t_span, x_num, title, labels, legend, comment=""):
-    # plot states as functions of time
-    y_min, y_max = min(x_num.ravel()), max(x_num.ravel())
-    plt1 = figure(title=title, 
-                 x_range=[t_span[0], t_span[-1]], 
-                 y_range=[y_min - 0.3*(y_max-y_min), y_max + 0.3*(y_max-y_min)],
-                 plot_width=450, plot_height=250)
-    plt1.xaxis.axis_label = labels[0]
-    plt1.yaxis.axis_label = labels[1]
-    
-    colors = Colorblind[max(len(x_num), min(Colorblind.keys()))]
-    r1 = [plt1.line(t_span, x_num[i,:], color=colors[i], line_width=2, legend=legend[i])
-          for i in range(len(x_num))]
-    
-    # plot x2 as a functino of x1
-    x_min, x_max, y_min, y_max = min(x_num[0,:]), max(x_num[0,:]), min(x_num[1,:]), max(x_num[1,:])
-    plt2 = figure(x_range=[x_min - 0.3*(x_max-x_min), x_max + 0.3*(x_max-x_min)],
-                  y_range=[y_min - 0.3*(y_max-y_min), y_max + 0.3*(y_max-y_min)],
-                  plot_width=250, plot_height=250)
-    plt2.xaxis.axis_label = legend[0]
-    plt2.yaxis.axis_label = legend[1]
-    r2 = plt2.line(x_num[0,:], x_num[1,:], color=colors[0], line_width=2)
-
-    div = Div(width=250, text=comment)
-
-    show(row(plt1, plt2, div), notebook_handle=True)    
-    return plt1, plt2, r1, 
 
 def convert2img(x, size, steepness=5.5, midpoint=0.5):
     """transforms 1D array x into an image of given size

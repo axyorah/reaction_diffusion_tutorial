@@ -1,0 +1,8 @@
+It seems assuming linear dependence for
+reaction rates wasn't exactly a great idea - 
+now our system has enzymes with 
+negative concentrations... fantastic...
+We can fix it by assuming more realistic nonlinear kinetics, 
+but let's not do it just yet. 
+After all, we're only trying to build intuition
+while playing with simple maths here.
