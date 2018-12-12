@@ -1,9 +1,9 @@
 name: reaction_diffusion
 dependencies:
-  - python=3.6
-  - bokeh=0.9.2
-  - numpy=1.9.*
+  - python=3.7
+  - bokeh=1.0.2
+  - numpy=1.7.*
   - scipy=1.1.*
-  - Pillow
+  - pillow=4.*
   - tqdm=4.*
   - ipywidgets=7.*
