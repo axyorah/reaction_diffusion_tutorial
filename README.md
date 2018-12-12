@@ -13,7 +13,7 @@
 
 <a name="requirements"></a><font size=4><b>Requirements</b></font>
 
-This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [Pillow](https://python-pillow.org/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
+This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [pillow](https://python-pillow.org/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
 
 If you're using pip:
 ```
@@ -40,9 +40,14 @@ conda install -c conda-forge ipywidgets
 
 <a name="installing"></a><font size=4><b>Installing</b></font>
 
+- Cloning from github:
+
 ```
 git clone https://github.com/axyorah/reaction_diffusion_tutorial
 ```
+
+- If you just want to check the files in your browser but github doesn't render jupyter notebooks correctly (this happens often apparently) - follow this link to nbviewer: https://nbviewer.jupyter.org/github/axyorah/reaction_diffusion_tutorial/blob/master/main.ipynb
+
 
 <br>
 
