@@ -1,6 +1,6 @@
 ## Pattern formation in reaction-diffusion systems: Oscillations in time and space
 ### Jupyter tutorial
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master?filepath=main.ipynb)
 
 <br>
 
@@ -56,11 +56,11 @@ git clone https://github.com/axyorah/reaction_diffusion_tutorial
 
 - If you want to **interact** with the files in your browser (and you should) - follow this link to binder: 
 
->https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master
+>https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master?filepath=main.ipynb
 
 <br>
 
-<a name="introduction"></a><font size=4><b>Introduction: Why would you want to code it anyway</b></font>
+<a name="introduction"></a><font size=4><b>Why would you want to code it anyway</b></font>
 
 Oscillating dynamic systems are fascinating! And omnipresent... No matter your background, you've probably come across some oscillators during your studies, be it in a form of an [RLC contour](https://en.wikipedia.org/wiki/RLC_circuit) in your electrical engineering class or in a form of a [circadian clock](https://en.wikipedia.org/wiki/Circadian_clock) in your biochemistry class.
 
@@ -71,7 +71,7 @@ Oscillating dynamic systems are fascinating! And omnipresent... No matter your b
 </td>
 </table>
 
-Random question #1: what does the Briggs-Rauscher reaction in the video above have to do with the spotty pattern of cheetah and stripy pattern of zebra on the images below? Well, since this question is asked in the tutorial dedicated to oscillators, you might've guessed that the answer should have something to do with the oscillators... And this is indeed true. Although, if the Briggs-Rauscher reaction is an example of a system, that is oscillatory in time and is perfectly stable (homogenous) in space, the patterns on animal fur, quite the opposite, are the examples of systems, that are oscillatory in space and perfectly stable in time. The idea, that initially homogenous systems can spontaneously destabilize and develop spatial patterns was discussed back in the 1952 by Alan Turing in [Chemical Basis of Morphogenesis](http://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf). This seminal paper showed that the formation of many complex spatial patterns can be nicely described by all too familiar maths (and physics)! Which is really good news for anyone, who would want to recreate the formation of such patterns _in silico_.
+Oscillations don't always come in the same flavour. Briggs-Rauscher reaction in the video above is definitely an example of an oscillating system. But so are the dots on a fur of a cheetah and patches of grass in an arid dryland! Although, if the Briggs-Rauscher reaction is an example of a system, that is oscillatory in time and is perfectly stable (homogenous) in space, the patterns on animal fur and the patches of grass, quite the opposite, are the examples of systems, that are oscillatory in space and perfectly stable in time. The idea, that initially homogenous systems can spontaneously destabilize and develop spatial patterns was discussed back in the 1952 by Alan Turing in [Chemical Basis of Morphogenesis](http://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf). This seminal paper showed that the formation of many complex spatial patterns can be nicely described by all too familiar maths (and physics)! Which is really good news for anyone, who would want to recreate the formation of such patterns _in silico_.
 
 <table>
 <td>
@@ -79,27 +79,17 @@ Random question #1: what does the Briggs-Rauscher reaction in the video above ha
 <body><center><br>Stationary dotted pattern of cheetah (<a href="https://upload.wikimedia.org/wikipedia/commons/6/68/Cheetah_%28Kruger_National_Park%2C_South_Africa%2C_2001%29.jpg">img</a>)</center></body>
 <td>
 <td>
-<img width="250" height="150" src='images/zebra_pattern.jpg'></img>
-<body><center><br>Stationary stripy pattern of zebra (<a href="https://upload.wikimedia.org/wikipedia/commons/1/12/Hartmann_zebra_hobatere_S.jpg">img</a>)</center></body>
+<img width="213" height="150" src='images/grass_patches_dryland.png'></img>
+<body><center><br>Stationary labirynth-like grass pattern of drylands (<a href="https://www.mmnp-journal.org/articles/mmnp/pdf/2011/01/mmnp20106p163.pdf">by E. Meron</a>)</center></body>
 </td>
 </table>
 
-Now you might be thinking: ok, I can picture systems, that are periodic in time and stable (homogenous) in space - they behave like chemical oscillators in a well-stirred beaker; I can also picture systems that are periodic in space and stable in time - these are the systems, that, e.g., describe the formation of patterns on animal fur. But what about the systems that oscillate in both time and space? That's a great thing to wonder about, as diversity of patterns and complexity of behaviours, emerging in such systems, is mind-boggling! In literature you would usually find mentions of spirals, standing waves and traveling waves, which often emerge in such systems. In physical world these patterns occur, e.g., in a petri dish with [Belousov-Zhabotinsky](https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction) reaction. But there's so much more to it! In autocatacytic Reaction-Diffusion system described by the Gray-Scott model you can stumble upon dynamic patterns that resemble cell division, coral growth and even the formation of exotic [U-skates](http://mrob.com/pub/comp/xmorphia/uskate-world.html)! Robert Munafo's [xmorphia](http://mrob.com/pub/comp/xmorphia/index.html) is a great resource to explore all the bizzare patterns that emerge in Gray-Scott system. Here are some more examples:
+Now you might be thinking: ok, I can picture systems, that are periodic in time and stable (homogenous) in space - they behave like chemical oscillators in a well-stirred beaker; I can also picture systems that are periodic in space and stable in time - these are the systems, that, e.g., describe the formation of patterns on animal fur. But what about the systems that oscillate in both time and space? That's a great thing to wonder about, as diversity of patterns and complexity of behaviours, emerging in such systems, is mind-boggling! In literature you would usually find mentions of spirals, standing waves and traveling waves, which often emerge in such systems. In physical world these patterns occur, e.g., in a petri dish with [Belousov-Zhabotinsky](https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction) reaction. But there's so much more to it! In autocatacytic Reaction-Diffusion system described by the Gray-Scott model you can stumble upon dynamic patterns that resemble cell division, coral growth and even the formation of exotic [U-skates](http://mrob.com/pub/comp/xmorphia/uskate-world.html)! Robert Munafo's [xmorphia](http://mrob.com/pub/comp/xmorphia/index.html) is a great resource to explore all the bizzare patterns that emerge in Gray-Scott system. 
 
 <table>
 <td>
-    <img src="images/belousov-zhabotinsky.gif" style="width:320px;height:200px;"></img>
-    <body><center> <br>Traveling waves in <br> <a href="https://en.wikipedia.org/wiki/Belousov%E2%80%93Zhabotinsky_reaction">Belousov-Zhabotinsky</a> reaction (<a href="https://www.youtube.com/watch?v=PpyKSRo8Iec">vid</a>)</center> </body>
-<td>    
-
-<td>
 <img src='images/gray-scott-corals.gif' style="width:250px;height:200px;"></img>
 <body><center><br>"Coral growth" <br>in Gray-Scott Reaction-Diffusion system (<a href="http://www.karlsims.com/rd.html">vid</a>)</center></body>
-<td>
-    
-<td>
-    <img src='images/Gray_Scott_F620_k609_fr1248.gif' style="width:250px;height:200px;"></img>    
-    <body><center> <br>"U-skates" emerging <br>in Gray-Scott Reaction-Diffusion system (<a href="http://mrob.com/pub/comp/xmorphia/index.html#formula">vid</a>)</center></body>
 <td>
 </table>
 
