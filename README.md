@@ -1,5 +1,6 @@
 ## Hands-on jupyter tutorial on pattern formation in reaction-diffusion systems
 ### Oscillations in time and space!
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master)
 
 <br>
 
@@ -48,8 +49,14 @@ conda install -c conda-forge ipywidgets
 git clone https://github.com/axyorah/reaction_diffusion_tutorial
 ```
 
-- If you just want to check the files in your browser but github doesn't render jupyter notebooks correctly (this happens often apparently) - follow this link to nbviewer: https://nbviewer.jupyter.org/github/axyorah/reaction_diffusion_tutorial/blob/master/main.ipynb
+- If you just want to check the static files in your browser but github doesn't render jupyter notebooks correctly (this happens often apparently) - follow this link to nbviewer: 
 
+>https://nbviewer.jupyter.org/github/axyorah/reaction_diffusion_tutorial/blob/master/main.ipynb
+
+
+- If you want to **interact** with the files in your browser (and you should) - follow this link to binder: 
+
+>https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master
 
 <br>
 
@@ -57,8 +64,12 @@ git clone https://github.com/axyorah/reaction_diffusion_tutorial
 
 Oscillating dynamic systems are fascinating! And omnipresent... No matter your background, you've probably come across some oscillators during your studies, be it in a form of an [RLC contour](https://en.wikipedia.org/wiki/RLC_circuit) in your electrical engineering class or in a form of a [circadian clock](https://en.wikipedia.org/wiki/Circadian_clock) in your biochemistry class.
 
+<table>
+<td>
 <img width="300" height="200" src="images/briggs-rauscher.gif"></img>
 <body><center><font size="2"><br><a href="https://en.wikipedia.org/wiki/Briggs%E2%80%93Rauscher_reaction">Briggs–Rauscher</a> reaction  is a well-known chemical oscillator (<a href="https://www.youtube.com/watch?v=WpBwlSn1XPQ">vid</a>)</font></center></body>
+</td>
+</table>
 
 Random question #1: what does the Briggs-Rauscher reaction in the video above have to do with the spotty pattern of cheetah and stripy pattern of zebra on the images below? Well, since this question is asked in the tutorial dedicated to oscillators, you might've guessed that the answer should have something to do with the oscillators... And this is indeed true. Although, if the Briggs-Rauscher reaction is an example of a system, that is oscillatory in time and is perfectly stable (homogenous) in space, the patterns on animal fur, quite the opposite, are the examples of systems, that are oscillatory in space and perfectly stable in time. The idea, that initially homogenous systems can spontaneously destabilize and develop spatial patterns was discussed back in the 1952 by Alan Turing in [Chemical Basis of Morphogenesis](http://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf). This seminal paper showed that the formation of many complex spatial patterns can be nicely described by all too familiar maths (and physics)! Which is really good news for anyone, who would want to recreate the formation of such patterns _in silico_.
 
