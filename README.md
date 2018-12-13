@@ -1,5 +1,5 @@
-## Hands-on jupyter tutorial on pattern formation in reaction-diffusion systems
-### Oscillations in time and space!
+## Pattern formation in reaction-diffusion systems: Oscillations in time and space
+### Jupyter tutorial
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master)
 
 <br>
