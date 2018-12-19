@@ -4,6 +4,6 @@ dependencies:
   - bokeh=1.0.2
   - numpy
   - scipy
-  - PIL
+  - pillow
   - tqdm=4.*
   - ipywidgets=7.*

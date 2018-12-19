@@ -1,20 +1,20 @@
-## Pattern formation in reaction-diffusion systems: Oscillations in time and space
-### Jupyter tutorial
+# Pattern formation in reaction-diffusion systems: Oscillations in time and space
+## Jupyter tutorial
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/axyorah/reaction_diffusion_tutorial/master?filepath=main.ipynb)
 
 <br>
 
 <a name="table"></a><font size=4><b>Table of contents:</b></font>
 - [Requirements](#requirements)
-- [Installing](#installing)
-- [Introduction: Why would you want to code it anyway](#introduction)
+- [Installation](#installation)
+- [Introduction: So what's it all about anyway](#introduction)
 - [Links to the actual content](#links)
 
 <br>
 
 <a name="requirements"></a><font size=4><b>Requirements</b></font>
 
-This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [PIL](http://www.pythonware.com/products/pil/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
+This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [pillow](https://pillow.readthedocs.io/en/5.3.x/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
 
 If you're using pip:
 ```
@@ -22,24 +22,14 @@ pip install numpy
 pip install scipy
 pip install bokeh
 pip install tqdm
-pip install PIL
+pip install pillow
 pip install ipywidgets
 jupyter nbextension enable --py widgetsnbextension
 ```
 
-If you're using conda:
-```
-conda install numpy
-conda install scipy
-conda install bokeh
-conda install -c conda-forge tqdm
-conda install PIL
-conda install -c conda-forge ipywidgets
-```
-
 <br>
 
-<a name="installing"></a><font size=4><b>Installing</b></font>
+<a name="installation"></a><font size=4><b>Installation</b></font>
 
 - Cloning from github:
 
