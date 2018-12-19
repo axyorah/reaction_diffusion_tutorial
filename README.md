@@ -14,7 +14,7 @@
 
 <a name="requirements"></a><font size=4><b>Requirements</b></font>
 
-This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [scikit-image](https://scikit-image.org/), [matplotlib](https://matplotlib.org/index.html) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
+This tutorial is written as a collection of interactive jupyter notebooks (Python3 runtime). It uses [numpy](http://www.numpy.org/), [scipy](https://www.scipy.org/), [bokeh](https://bokeh.pydata.org/en/latest/), [tqdm](https://pypi.org/project/tqdm/), [PIL](http://www.pythonware.com/products/pil/) and [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/).
 
 If you're using pip:
 ```
@@ -22,8 +22,7 @@ pip install numpy
 pip install scipy
 pip install bokeh
 pip install tqdm
-pip install scikit-image
-pip install matplotlib
+pip install PIL
 pip install ipywidgets
 jupyter nbextension enable --py widgetsnbextension
 ```
@@ -34,8 +33,7 @@ conda install numpy
 conda install scipy
 conda install bokeh
 conda install -c conda-forge tqdm
-conda install scikit-image
-conda install matplotlib
+conda install PIL
 conda install -c conda-forge ipywidgets
 ```
 
