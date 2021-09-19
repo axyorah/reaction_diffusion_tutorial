@@ -1,7 +1,8 @@
 name: reaction_diffusion
 dependencies:
   - python=3.7
-  - bokeh=1.0.2
+  - bokeh=2.4.0
+  - jupyter_bokeh
   - numpy
   - scipy
   - pillow
